@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+<category><pattern>Hi</pattern><template><srai>Greeting</srai></template></category>
+<category><pattern>Hello</pattern><template><srai>Greeting</srai></template></category>
+<category><pattern>Good morning</pattern><template><srai>Greeting</srai></template></category>
+<category><pattern>Good afternoon</pattern><template><srai>Greeting</srai></template></category>
+<category><pattern>Good evening</pattern><template><srai>Greeting</srai></template></category>
+
+
   <category>
-    <pattern>*</pattern>
-    <template>Constantin hat Aktien in Discord</template>
-        <pattern>xyz</pattern>
-    <template>TEST</template>
+    <pattern>Greeting</pattern>
+    <template>Constantin sure loves Discord</template>
   </category>
+  <category>
+<pattern>What is discord</pattern> 
+<template>Discord is Constantin's girlfriend</template>
+</category>    
+<category>
+<pattern>What is zoom</pattern> 
+<template>Zoom is Constantin's enemy nr1</template>
+</category>    
 </aiml>
