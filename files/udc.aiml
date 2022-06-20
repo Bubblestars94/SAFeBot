@@ -12,11 +12,15 @@
     <template>Constantin sure loves Discord</template>
   </category>
   <category>
-<pattern>What is discord</pattern> 
-<template>Discord is Constantin's girlfriend</template>
-</category>    
-<category>
-<pattern>What is zoom</pattern> 
-<template>Zoom is Constantin's enemy nr1</template>
+    <pattern>My name is *</pattern>
+    <template>Hi <set name="username"><star></star></set></template>
+  </category>
+  <category>
+<pattern>What is *</pattern> 
+<template>
+   <think> <set name = "state"><star/></set> </think>
+     <condition name="state" value ="Discord">Discord is Constantin's girlfriend.</condition>
+     <condition name = "state" value = "Zoom" > Zoom is Constantin's enemy nr1.</condition>
+    </template>
 </category>    
 </aiml>
