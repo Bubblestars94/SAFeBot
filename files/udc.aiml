@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <category><pattern>Hi</pattern><template><srai>Greeting</srai></template></category>
+<category><pattern>Greetings</pattern><template><srai>Greeting</srai></template></category>
 <category><pattern>Hello</pattern><template><srai>Greeting</srai></template></category>
 <category><pattern>Good morning</pattern><template><srai>Greeting</srai></template></category>
 <category><pattern>Good afternoon</pattern><template><srai>Greeting</srai></template></category>
@@ -13,7 +14,7 @@
   </category>
   <category>
     <pattern>My name is *</pattern>
-    <template>Hi <set name="username"><star></star></set></template>
+    <template>Hi <set name="username"><star></star></set> what can I do for you?</template>
   </category>
   <category>
 <pattern>What is *</pattern> 
