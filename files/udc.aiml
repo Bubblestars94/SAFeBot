@@ -1,27 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<category><pattern>Hi</pattern><template><srai>Greeting</srai></template></category>
-<category><pattern>Greetings</pattern><template><srai>Greeting</srai></template></category>
-<category><pattern>Hello</pattern><template><srai>Greeting</srai></template></category>
-<category><pattern>Good morning</pattern><template><srai>Greeting</srai></template></category>
-<category><pattern>Good afternoon</pattern><template><srai>Greeting</srai></template></category>
-<category><pattern>Good evening</pattern><template><srai>Greeting</srai></template></category>
+ 
+
+ <category>
+     <pattern>*</pattern>
+     <template><image>https://business-user.de/wp-content/uploads/2020/03/Chatbot_Depositphotos_166169288.jpg</image>
+     Hallo, schön dich kennen zu lernen! Bei was kann ich dir helfen?
+     
+          <button>
+              <text>Ich habe Fragen zu SAFe</text>
+              <postback>hilfe</postback>
+          </button>
+     </template>
+ </category>
+  <category>
+      <pattern>hilfe</pattern>
+      <template>
+          <image>https://business-user.de/wp-content/uploads/2020/03/Chatbot_Depositphotos_166169288.jpg</image>
+          Wie kann ich dir bei SAFe helfen?
+
+          <button>
+              <text>Was ist SAFe?</text>
+              <postback>SAFE</postback>
+          </button>
+          <button>
+              <text>Was ist das SAFe Mindset?</text>
+              <postback>MINDSET</postback>
+          </button>
+          <button>
+              <text>Was sind die SAFe Prinzipien?</text>
+              <postback>PRINCIPLES</postback>
+          </button>
+          <button>
+              <text>Welche Skalierungsebenen gibt es?</text>
+              <postback>SCALE</postback>
+          </button>
+          <button>
+              <text>Was ist ein "ART"?</text>
+              <postback>ART</postback>
+          </button>
+          <button>
+              <text>Was bedeutet Built-in-Quality?</text>
+              <postback>BIQ</postback>
+          </button>
+        <button>
+            <text>Was ist eine CI-Pipeline?</text>
+            <postback>CIP</postback>
+        </button>
+         <button>
+          <text>Weitere Informationen</text>
+          <url>https://www.scaledagileframework.com/</url>
+      </button>
+      </template>
+  </category>
 
 
+ 
   <category>
-    <pattern>Greeting</pattern>
-    <template>Constantin sure loves Discord</template>
+      <pattern>SAFE</pattern>
+      <template>SAFe steht für Scaled Agile Framework und beschreibt, wie die Vorteile bestehender agiler Methoden auf Unternehmensebene genutzt werden können.
+        <button>
+              <text>Zum SAFe Mindset</text>
+              <postback>MINDSET</postback>
+        </button>
+        <button>
+              <text>Weitere Informationen</text>
+              <url>https://www.scaledagileframework.com/</url>
+        </button>
+      
+      </template>
+
   </category>
+
   <category>
-    <pattern>My name is *</pattern>
-    <template>Hi <set name="username"><star></star></set> what can I do for you?</template>
+      <pattern>MINDSET</pattern>
+      <template>
+Das Lean-Agile Mindset ist die Kombination aus Überzeugungen, Annahmen, Einstellungen und Handlungen von SAFe-Führungskräften und -Praktikern, die sich die Konzepte des Agilen Manifests und des Lean-Denkens zu eigen machen. Es ist die persönliche, intellektuelle und führungsbezogene Grundlage für die Übernahme und Anwendung von SAFe-Prinzipien und -Praktiken.
+        <button>
+              <text>Weitere Informationen</text>
+              <url>https://www.scaledagileframework.com/lean-agile-mindset/</url>
+        </button>
+      </template>
   </category>
+
   <category>
-<pattern>What is *</pattern> 
-<template>
-   <think> <set name = "state"><star/></set> </think>
-     <condition name="state" value ="Discord">Discord is Constantin's girlfriend.</condition>
-     <condition name = "state" value = "Zoom" > Zoom is Constantin's enemy nr1.</condition>
-    </template>
-</category>    
-</aiml>
+      <pattern>SCALE</pattern>
+      <template>
+          Essenzielle Konfiguration:
+        <image>https://www.scaledagileframework.com/wp-content/uploads/2021/01/SAFe_5.1_Essential_SAFe_ImageMap.png</image>
+        Große Lösung:
+        <image>https://www.scaledagileframework.com/wp-content/uploads/2021/01/SAFe_5.1_Large_Solution_SAFe_ImageMap.png</image>
+        Portfolie:
+        <image>https://www.scaledagileframework.com/wp-content/uploads/2021/01/SAFe_5.1_Portfolio_SAFe_ImageMap.png</image>
+        Volle Konfiguration:
+        <image>https://www.scaledagileframework.com/wp-content/uploads/2021/01/SAFe_5.1_Full_SAFe_ImageMap.png</image>
+        <button>
+              <text>Interaktive Grafik</text>
+              <url>https://www.scaledagileframework.com/</url>
+        </button>
+      </template>
+      
+  </category>
+
+  <category>
+      <pattern>ART</pattern>
+      <template>
+          Der Agile Release Train (ART) ist ein langlebiges Team von Agile Teams, das zusammen mit anderen Stakeholdern eine oder mehrere Lösungen in einem Wertstrom inkrementell entwickelt, liefert und gegebenenfalls betreibt.
+        <button>
+              <text>Weitere Informationen</text>
+              <url>https://www.scaledagileframework.com/agile-release-train/</url>
+        </button>
+      </template>
+  </category>
+
+  <category>
+      <pattern>BIQ</pattern>
+      <template>
+       Integrierte Qualitätspraktiken stellen sicher, dass jedes Lösungselement bei jedem Schritt während der gesamten Entwicklung die entsprechenden Qualitätsstandards erfüllt.
+        <button>
+              <text>Weitere Informationen</text>
+              <url>https://www.scaledagileframework.com/built-In-quality/</url>
+        </button>
+      </template>
+  </category>
+
+  <category>
+      <pattern>CIP</pattern>
+      <template>
+        Kontinuierliche Integration (Continuous Integration, CI) ist der Prozess, bei dem Funktionen aus dem Program Backlog in einer Staging-Umgebung entwickelt, getestet, integriert und validiert werden, so dass sie für die Bereitstellung und Veröffentlichung bereit sind.
+        <button>
+              <text>Weitere Informationen</text>
+              <url>https://www.scaledagileframework.com/continuous-delivery-pipeline/</url>
+        </button>
+      </template>
+  </category>
+[14:41]
+<category>
+      <pattern>PRINCIPLES</pattern>
+      <template>
+          Es gibt 10 Prinzipien
+          <ol>
+              <li>Eine wirtschaftliche Sichtweise</li>
+              <li>Systemdenken anwenden</li>
+              <li>Variabilität voraussetzen; Optionen bewahren</li>
+              <li>Inkrementeller Aufbau mit schnellen, integrierten Lernzyklen</li>
+              <li>Meilensteine auf der Grundlage einer objektiven Bewertung der funktionierenden Systeme</li>
+              <li>Visualisierung und Begrenzung des WIP, Reduzierung der Losgrößen und Verwaltung der Warteschlangenlänge</li>
+              <li>Kadenz anwenden, mit bereichsübergreifender Planung synchronisieren</li>
+              <li>Entfesseln Sie die intrinsische Motivation von Wissensarbeitern</li>
+              <li>Dezentralisierung der Entscheidungsfindung</li>
+              <li>Organisieren Sie um den Wert herum</li>
+          </ol>
+
+
+      </template>
+  </category>
+  </aiml>
